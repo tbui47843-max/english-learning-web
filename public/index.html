@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Learning Web</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>English Vocabulary Learning</h1>
+
+      <section class="panel">
+        <h2>1) Upload Vocabulary CSV</h2>
+        <input type="file" id="csvFile" accept=".csv" />
+        <button id="uploadBtn">Upload</button>
+        <p id="uploadStatus"></p>
+      </section>
+
+      <section class="panel mode-switcher">
+        <button id="flashcardModeBtn">Flashcard Mode</button>
+        <button id="translationModeBtn">Translation Mode</button>
+      </section>
+
+      <section class="panel" id="flashcardPanel">
+        <h2>2) Flashcard Learning</h2>
+        <div class="card" id="flashcardCard">
+          <h3 id="word">No word loaded</h3>
+          <p id="pronunciation"></p>
+          <p id="meaning"></p>
+          <p id="example"></p>
+        </div>
+        <div class="actions">
+          <button id="speakBtn">🔊 Pronounce</button>
+          <button id="knowBtn">I know this</button>
+          <button id="reviewBtn">Need review</button>
+        </div>
+      </section>
+
+      <section class="panel hidden" id="translationPanel">
+        <h2>3) Translation Exercise</h2>
+        <p id="translationPrompt">No exercise yet.</p>
+        <input
+          type="text"
+          id="translationInput"
+          placeholder="Type your English translation"
+        />
+        <div class="actions">
+          <button id="checkTranslationBtn">Check</button>
+          <button id="nextExerciseBtn">Next Exercise</button>
+        </div>
+        <p id="translationResult"></p>
+      </section>
+    </div>
+
+    <script src="/js/flashcard.js"></script>
+    <script src="/js/translation.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
