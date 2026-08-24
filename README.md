@@ -15,28 +15,28 @@ Web application for learning English vocabulary with flashcards and translation 
 ```
 english-learning-web/
 ├── src/
-│   ├── main.cpp
-│   ├── database.cpp/h
-│   ├── csv_parser.cpp/h
-│   └── vocabulary.cpp/h
+│   ├── main.py
+│   ├── database.py
+│   ├── csv_parser.py
+│   └── vocabulary.py
 ├── public/
 │   ├── index.html
 │   ├── css/style.css
 │   └── js/{app.js,flashcard.js,translation.js}
 ├── uploads/
-├── CMakeLists.txt
+├── requirements.txt
 ├── README.md
 └── sample_vocabulary.csv
 ```
 
-## Build and Run
+## Run with Python
 
 ```bash
-mkdir -p build
-cd build
-cmake ..
-cmake --build .
-./english_learning_web
+cd /home/runner/work/english-learning-web/english-learning-web
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python src/main.py
 ```
 
 The app runs at: `http://localhost:18080`
